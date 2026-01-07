@@ -9,14 +9,15 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0D0D0D;
+      background-color: #1A1A1A;
       color: #FFFFFF;
       line-height: 1.6;
     }
 
+    /* HEADER */
     header {
       background: url('header-image.jpg') center/cover no-repeat;
-      padding: 120px 20px;
+      padding: 100px 20px 60px;
       text-align: center;
       position: relative;
     }
@@ -25,7 +26,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.4);
     }
 
     header .content {
@@ -33,22 +34,31 @@
       z-index: 2;
     }
 
-    header img {
-      width: 140px;
-      margin-bottom: 20px;
+    /* LOGOS CÔTE À CÔTÉ */
+    .logo-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    .logo-row img {
+      height: 80px;
+      width: auto;
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       margin-bottom: 10px;
       color: #F57C00;
     }
 
     .slogan {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       max-width: 700px;
       margin: 0 auto;
-      color: #DDDDDD;
+      color: #E6E6E6;
     }
 
     section {
@@ -58,15 +68,30 @@
 
     .intro-projet {
       max-width: 800px;
-      margin: 0 auto 60px;
+      margin: 0 auto 40px;
       font-size: 1.1rem;
-      color: #CCCCCC;
+      color: #DDDDDD;
     }
 
     h2 {
       font-size: 2rem;
       margin-bottom: 40px;
       color: #F57C00;
+    }
+
+    /* VIDÉOS */
+    .videos {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .videos a {
+      color: #F57C00;
+      text-decoration: none;
+      font-size: 1.1rem;
     }
 
     /* ÉQUIPE */
@@ -78,7 +103,7 @@
     }
 
     .team-card {
-      background: #111111;
+      background: #262626;
       padding: 25px;
       border-radius: 8px;
       width: 280px;
@@ -100,7 +125,7 @@
     }
 
     .partner-card {
-      background: #111111;
+      background: #262626;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.4);
@@ -109,21 +134,6 @@
     .partner-card img {
       width: 160px;
       height: auto;
-    }
-
-    /* VIDÉOS */
-    .videos {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .videos a {
-      color: #F57C00;
-      text-decoration: none;
-      font-size: 1.1rem;
     }
 
     /* FOOTER */
@@ -140,13 +150,10 @@
       text-decoration: none;
     }
 
-    /* -------------------------
-       VERSION MOBILE RESPONSIVE
-       ------------------------- */
+    /* MOBILE */
     @media (max-width: 600px) {
-
-      header {
-        padding: 80px 20px;
+      .logo-row img {
+        height: 60px;
       }
 
       h1 {
@@ -169,10 +176,6 @@
       .videos a {
         font-size: 1rem;
       }
-
-      footer {
-        font-size: 0.9rem;
-      }
     }
   </style>
 </head>
@@ -182,7 +185,13 @@
   <!-- HEADER -->
   <header>
     <div class="content">
-      <img src="logo-header.png" alt="Logo" />
+
+      <!-- LOGOS CÔTE À CÔTÉ -->
+      <div class="logo-row">
+        <img src="logo bt.png" alt="Logo Benoit Trépanier">
+        <img src="logo wg.png" alt="Logo WG Productions">
+      </div>
+
       <h1>Malawgutunej (avancer ensemble)</h1>
       <p class="slogan">
         Des témoignages vidéos qui transforment une communauté et améliorent le dépistage du cancer chez les femmes Mi'gmaq de Listuguj.
@@ -190,11 +199,31 @@
     </div>
   </header>
 
-  <!-- TEXTE INTRO -->
+  <!-- INTRO -->
   <section>
     <p class="intro-projet">
       Les vidéos que vous verrez ici sont le fruit des talents de Thomas et moi-même, mais aussi de l'incroyable apport de l'équipe Mi'gmaq des services de santé communautaire de Listuguj et plus particulièrement de la chargée de projet de Malawgutunej, Mme Tanya Webster. Sa créativité et son lien serré avec sa communauté nous ont permis d'installer un fort sentiment de confiance et de sécurité lors des tournages avec les femmes qui ont si courageusement témoigné. Nous avons tenté de saisir la passion pour la vie de ces femmes, malgré les épreuves. Nous en sommes toutes et tous ressortis transformé.e.s.
     </p>
+  </section>
+
+  <!-- VIDÉOS (REMONTÉES) -->
+  <section>
+    <h2>Vidéos</h2>
+    <div class="videos">
+
+      <a href="https://drive.google.com/file/d/1cZOFiGeFjbJE42oXnibuVPTjIVtvUaxI/view?usp=sharing" target="_blank">
+        🎬 Donna Metallic – Directrice du centre de santé communautaire de Listuguj rassure les femmes de sa communauté sur la mammographie
+      </a>
+
+      <a href="https://drive.google.com/file/d/17g8Qgwsfpxd7y5H7d33Nm94UYshZX8tu/view?usp=sharing" target="_blank">
+        🎬 Veronica Vicaire – Une histoire de résilience après le décès de son mari emporté par le cancer
+      </a>
+
+      <a href="https://drive.google.com/file/d/1x3OUU7iLH7bNPzxWnmoTvWndz1HS7p-O/view?usp=sharing" target="_blank">
+        🎬 Suzie Isaac – Retrouver son identité après un combat contre le cancer du sein
+      </a>
+
+    </div>
   </section>
 
   <!-- ÉQUIPE -->
@@ -211,7 +240,7 @@
       <div class="team-card">
         <h3>Thomas Wadham Gagnon</h3>
         <p><strong>Co‑réalisation</strong></p>
-        <p>Co‑réalisation : idéation, direction artistique, caméra, montage</p>
+        <p>Idéation, direction artistique, caméra, montage</p>
       </div>
 
     </div>
@@ -234,30 +263,6 @@
         <img src="logo3.png" alt="Partenaire 3" />
       </div>
 
-      <div class="partner-card">
-        <img src="logo4.png" alt="Partenaire 4" />
-      </div>
-
-    </div>
-  </section>
-
-  <!-- VIDÉOS -->
-  <section>
-    <h2>Vidéos</h2>
-    <div class="videos">
-
-      <a href="https://drive.google.com/file/d/1cZOFiGeFjbJE42oXnibuVPTjIVtvUaxI/view?usp=sharing" target="_blank">
-        Donna Metallic, Directrice du centre de santé communautaire de Listuguj rassure les femmes de sa communauté sur la mammographie
-      </a>
-
-      <a href="https://drive.google.com/file/d/17g8Qgwsfpxd7y5H7d33Nm94UYshZX8tu/view?usp=sharing" target="_blank">
-        Veronica Vicaire raconte son histoire de résilience après le décès de son mari emporté par le cancer
-      </a>
-
-      <a href="https://drive.google.com/file/d/1x3OUU7iLH7bNPzxWnmoTvWndz1HS7p-O/view?usp=sharing" target="_blank">
-        Suzie Isaac explique comment elle a doucement retrouvé son identité après un combat contre le cancer du sein
-      </a>
-
     </div>
   </section>
 
@@ -266,7 +271,7 @@
     <p>Pour collaborer avec nous : <strong>trepanb@hotmail.com</strong></p>
 
     <p>
-      <a href="https://www.linkedin.com/in/benoit-trepanier" target="_blank">LinkedIn Benoit Trépanier</a>
+      <a href="https://www.linkedin.com/in/btconsultant/" target="_blank">LinkedIn Benoit Trépanier</a>
       |
       <a href="https://www.wgpro.ca" target="_blank">Site web de Thomas (WG Productions)</a>
     </p>
