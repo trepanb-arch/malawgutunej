@@ -1,70 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../../libs/jquery-3.1.1.min.js"></script>
-    <script type="module" src="sidepanel.js" defer></script>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malawgutunej – Avancer ensemble</title>
 
-        #sidepanel {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0D0D0D;
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
 
-        #sidepanelPreRendered {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+    header {
+      background: url('header-image.jpg') center/cover no-repeat;
+      padding: 120px 20px;
+      text-align: center;
+      position: relative;
+    }
 
-        .loader-container {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100vw;
-            height: 100vh;
-            gap: 20px;
-        }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
 
-        .hidden {
-            display: none;
-        }
+    header .content {
+      position: relative;
+      z-index: 2;
+    }
 
-        #lottie-animation {
-            height: 80px;
-        }
+    header img {
+      width: 140px;
+      margin-bottom: 20px;
+    }
 
-        #tooltipTextEnabled {
-            font-family: 'Adobe Clean', sans-serif;
-            font-size: 14px;
-            line-height: 21px;
-            text-align: center;
-            vertical-align: middle;
-            width: 212px;
-        }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #F57C00;
+    }
 
-    </style>
+    .slogan {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #DDDDDD;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .intro-projet {
+      max-width: 800px;
+      margin: 0 auto 60px;
+      font-size: 1.1rem;
+      color: #CCCCCC;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #F57C00;
+    }
+
+    /* ÉQUIPE */
+    .team-text {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .team-card {
+      background: #111111;
+      padding: 25px;
+      border-radius: 8px;
+      width: 280px;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .team-card h3 {
+      margin-top: 0;
+      color: #FFFFFF;
+    }
+
+    /* PARTENAIRES */
+    .partners {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .partner-card {
+      background: #111111;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .partner-card img {
+      width: 160px;
+      height: auto;
+    }
+
+    /* VIDÉOS */
+    .videos {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .videos a {
+      color: #F57C00;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111111;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+      color: #CCCCCC;
+    }
+
+    footer a {
+      color: #F57C00;
+      text-decoration: none;
+    }
+
+    /* -------------------------
+       VERSION MOBILE RESPONSIVE
+       ------------------------- */
+    @media (max-width: 600px) {
+
+      header {
+        padding: 80px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .slogan {
+        font-size: 1rem;
+      }
+
+      .team-card {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .partner-card img {
+        width: 130px;
+      }
+
+      .videos a {
+        font-size: 1rem;
+      }
+
+      footer {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="loader-container hidden">
-        <div id="lottie-animation"></div>
-        <div id="tooltipTextEnabled" class="translate"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="content">
+      <img src="logo-header.png" alt="Logo" />
+      <h1>Malawgutunej (avancer ensemble)</h1>
+      <p class="slogan">
+        Des témoignages vidéos qui transforment une communauté et améliorent le dépistage du cancer chez les femmes Mi'gmaq de Listuguj.
+      </p>
     </div>
-    <iframe
-        id="sidepanel"
-        title="Adobe Chatbot"
-        class="hidden"
-    >
-    </iframe>
+  </header>
+
+  <!-- TEXTE INTRO -->
+  <section>
+    <p class="intro-projet">
+      Les vidéos que vous verrez ici sont le fruit des talents de Thomas et moi-même, mais aussi de l'incroyable apport de l'équipe Mi'gmaq des services de santé communautaire de Listuguj et plus particulièrement de la chargée de projet de Malawgutunej, Mme Tanya Webster. Sa créativité et son lien serré avec sa communauté nous ont permis d'installer un fort sentiment de confiance et de sécurité lors des tournages avec les femmes qui ont si courageusement témoigné. Nous avons tenté de saisir la passion pour la vie de ces femmes, malgré les épreuves. Nous en sommes toutes et tous ressortis transformé.e.s.
+    </p>
+  </section>
+
+  <!-- ÉQUIPE -->
+  <section>
+    <h2>Équipe</h2>
+    <div class="team-text">
+
+      <div class="team-card">
+        <h3>Benoit Trépanier</h3>
+        <p><strong>Consultant en gestion et communication</strong></p>
+        <p>Co‑réalisation : idéation, scénarios, logistique, entrevues</p>
+      </div>
+
+      <div class="team-card">
+        <h3>Thomas Wadham Gagnon</h3>
+        <p><strong>Co‑réalisation</strong></p>
+        <p>Co‑réalisation : idéation, direction artistique, caméra, montage</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PARTENAIRES -->
+  <section>
+    <h2>Partenaires</h2>
+    <div class="partners">
+
+      <div class="partner-card">
+        <img src="logo1.png" alt="Partenaire 1" />
+      </div>
+
+      <div class="partner-card">
+        <img src="logo2.png" alt="Partenaire 2" />
+      </div>
+
+      <div class="partner-card">
+        <img src="logo3.png" alt="Partenaire 3" />
+      </div>
+
+      <div class="partner-card">
+        <img src="logo4.png" alt="Partenaire 4" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDÉOS -->
+  <section>
+    <h2>Vidéos</h2>
+    <div class="videos">
+
+      <a href="https://drive.google.com/file/d/1cZOFiGeFjbJE42oXnibuVPTjIVtvUaxI/view?usp=sharing" target="_blank">
+        Donna Metallic, Directrice du centre de santé communautaire de Listuguj rassure les femmes de sa communauté sur la mammographie
+      </a>
+
+      <a href="https://drive.google.com/file/d/17g8Qgwsfpxd7y5H7d33Nm94UYshZX8tu/view?usp=sharing" target="_blank">
+        Veronica Vicaire raconte son histoire de résilience après le décès de son mari emporté par le cancer
+      </a>
+
+      <a href="https://drive.google.com/file/d/1x3OUU7iLH7bNPzxWnmoTvWndz1HS7p-O/view?usp=sharing" target="_blank">
+        Suzie Isaac explique comment elle a doucement retrouvé son identité après un combat contre le cancer du sein
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Pour collaborer avec nous : <strong>trepanb@hotmail.com</strong></p>
+
+    <p>
+      <a href="https://www.linkedin.com/in/benoit-trepanier" target="_blank">LinkedIn Benoit Trépanier</a>
+      |
+      <a href="https://www.wgpro.ca" target="_blank">Site web de Thomas (WG Productions)</a>
+    </p>
+
+    <p>© 2026 Benoit Trépanier, Consultant en gestion et communication</p>
+  </footer>
+
 </body>
 </html>
