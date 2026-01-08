@@ -71,7 +71,7 @@
       color: #F57C00;
     }
 
-    /* PORTRAITS CLIQUABLES */
+    /* PORTRAITS CLIQUABLES + DESCRIPTIONS */
     .video-portraits {
       display: flex;
       justify-content: center;
@@ -80,9 +80,15 @@
       flex-wrap: wrap;
     }
 
+    .video-portraits .portrait {
+      text-align: center;
+      width: 200px;
+    }
+
     .video-portraits img {
       width: 200px;
-      height: auto;
+      height: 200px;
+      object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.4);
       cursor: pointer;
@@ -91,6 +97,12 @@
 
     .video-portraits img:hover {
       transform: scale(1.03);
+    }
+
+    .video-portraits p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #F0F0F0;
     }
 
     /* VIDÉOS */
@@ -163,6 +175,7 @@
       text-decoration: none;
     }
 
+    /* MOBILE */
     @media (max-width: 600px) {
       .logo-row img {
         height: 130px;
@@ -178,8 +191,13 @@
         font-size: 1.1rem;
       }
 
+      .video-portraits .portrait {
+        width: 160px;
+      }
+
       .video-portraits img {
         width: 160px;
+        height: 160px;
       }
 
       .team-card {
@@ -223,19 +241,30 @@
   <section>
     <h2>Vidéos</h2>
 
-    <!-- PORTRAITS CLIQUABLES -->
+    <!-- PORTRAITS CLIQUABLES + DESCRIPTIONS -->
     <div class="video-portraits">
-      <a href="https://drive.google.com/file/d/1cZOFiGeFjbJE42oXnibuVPTjIVtvUaxI/view?usp=sharing" target="_blank">
-        <img src="Donna.png" alt="Donna Metallic">
-      </a>
 
-      <a href="https://drive.google.com/file/d/17g8Qgwsfpxd7y5H7d33Nm94UYshZX8tu/view?usp=sharing" target="_blank">
-        <img src="Veronica.png" alt="Veronica Vicaire">
-      </a>
+      <div class="portrait">
+        <a href="https://drive.google.com/file/d/1cZOFiGeFjbJE42oXnibuVPTjIVtvUaxI/view?usp=sharing" target="_blank">
+          <img src="donna.png" alt="Donna Metallic">
+        </a>
+        <p>Donna Metallic – Directrice du centre de santé communautaire de Listuguj</p>
+      </div>
 
-      <a href="https://drive.google.com/file/d/1x3OUU7iLH7bNPzxWnmoTvWndz1HS7p-O/view?usp=sharing" target="_blank">
-        <img src="Suzie.png" alt="Suzie Isaac">
-      </a>
+      <div class="portrait">
+        <a href="https://drive.google.com/file/d/17g8Qgwsfpxd7y5H7d33Nm94UYshZX8tu/view?usp=sharing" target="_blank">
+          <img src="veronica.png" alt="Veronica Vicaire">
+        </a>
+        <p>Veronica Vicaire – Une histoire de résilience après le décès de son mari</p>
+      </div>
+
+      <div class="portrait">
+        <a href="https://drive.google.com/file/d/1x3OUU7iLH7bNPzxWnmoTvWndz1HS7p-O/view?usp=sharing" target="_blank">
+          <img src="suzie.png" alt="Suzie Isaac">
+        </a>
+        <p>Suzie Isaac – Retrouver son identité après un combat contre le cancer du sein</p>
+      </div>
+
     </div>
 
     <!-- LIENS VIDÉOS -->
