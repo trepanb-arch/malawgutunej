@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malawgutunej – Travailler ensemble</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1A1A1A;
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
+    header {
+      background: #e46a2c;
+      padding: 150px 20px 90px;
+      text-align: center;
+      position: relative;
+    }
+    header .content {
+      position: relative;
+      z-index: 2;
+    }
+    .logo-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+    .logo-row img {
+      height: 140px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #FFFFFF;
+    }
+    .slogan {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #F0F0F0;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .intro-projet {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-size: 1.1rem;
+      color: #DDDDDD;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #F57C00;
+    }
+
+    /* PORTRAITS CLIQUABLES + DESCRIPTIONS */
+    .video-portraits {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .video-portraits .portrait {
+      text-align: center;
+      width: 200px;
+    }
+    .video-portraits img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.2s;
+      display: block;
+    }
+    .video-portraits img:hover {
+      transform: scale(1.03);
+    }
+    .video-portraits p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #F0F0F0;
+    }
+
+    /* ÉQUIPE */
+    .team-text {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .team-card {
+      background: #262626;
+      padding: 25px;
+      border-radius: 8px;
+      width: 280px;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .team-card h3 {
+      margin-top: 0;
+      color: #FFFFFF;
+    }
+
+    /* PARTENAIRES */
+    .partners {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .partner-card {
+      background: #FFFFFF;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .partner-card img {
+      width: 160px;
+      height: auto;
+      display: block;
+    }
+
+    footer {
+      background: #111111;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+      color: #CCCCCC;
+    }
+    footer a {
+      color: #F57C00;
+      text-decoration: none;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .logo-row { flex-direction: column; gap: 20px; }
+      .logo-row img { height: 120px; max-width: 90%; }
+      h1 { font-size: 2.2rem; }
+      .slogan { font-size: 1.1rem; }
+      .video-portraits .portrait { width: 160px; }
+      .video-portraits img { width: 160px; height: 160px; }
+      .team-card { width: 100%; max-width: 320px; }
+      .partner-card img { width: 130px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="content">
+      <div class="logo-row">
+        <img src="logo bt.png" alt="Logo Benoit Trépanier">
+        <img src="wg-productions.png" alt="Logo WG Productions">
+      </div>
+      <h1>Malawgutunej (Travailler ensemble)</h1>
+      <p class="slogan">
+        Des témoignages vidéos qui transforment une communauté et améliorent le dépistage du cancer chez les femmes Mi'gmaq de Listuguj.
+      </p>
+    </div>
+  </header>
+
+  <section>
+    <p class="intro-projet">
+      Les vidéos que vous verrez ici sont le fruit des talents et de la sensibilité de Thomas Wadham Gagnon et de moi-même, Benoit Trépanier, mais aussi de l'incroyable apport de l'équipe Mi'gmaq des services de santé communautaire de Listuguj et plus particulièrement de la chargée de projet de Malawgutunej, madame Tanya Webster. Sa créativité et son lien serré avec sa communauté nous ont permis d'installer un fort sentiment de confiance et de sécurité lors des tournages avec les femmes qui ont si courageusement témoigné. Nous avons tenté de saisir chez elles leur passion pour la vie, malgré les épreuves. Nous en sommes toutes et tous ressorti.e.s transformé.e.s.
+    </p>
+  </section>
+
+  <section>
+    <h2>Vidéos</h2>
+    <div class="video-portraits">
+
+      <div class="portrait">
+        <a href="https://drive.google.com/file/d/1cZOFiGeFjbJE42oXnibuVPTjIVtvUaxI/view?usp=sharing" target="_blank" rel="noopener">
+          <img src="Donna.png" alt="Donna Metallic">
+        </a>
+        <p>Donna Metallic – Directrice du centre de santé communautaire de Listuguj. Donna rassure les femmes de sa communauté sur la mammographie</p>
+      </div>
+
+      <div class="portrait">
+        <a href="https://drive.google.com/file/d/17g8Qgwsfpxd7y5H7d33Nm94UYshZX8tu/view?usp=sharing" target="_blank" rel="noopener">
+          <img src="Veronica.png" alt="Veronica Vicaire">
+        </a>
+        <p>Veronica Vicaire – Une histoire de résilience après le décès de son mari emporté par le cancer</p>
+      </div>
+
+      <div class="portrait">
+        <a href="https://drive.google.com/file/d/1DcejOR7QDU21w6A1O3rayBALlc1r9Nva/view?usp=sharing" target="_blank" rel="noopener">
+          <img src="Joanne.png" alt="Joanne Metallic">
+        </a>
+        <p>Joanne Metallic – Enseignante au primaire. Joanne explique le choc lorsqu'elle a appris qu'elle était atteinte du cancer du sein</p>
+      </div>
+
+      <div class="portrait">
+        <a href="https://drive.google.com/file/d/1x3OUU7iLH7bNPzxWnmoTvWndz1HS7p-O/view?usp=sharing" target="_blank" rel="noopener">
+          <img src="Suzie.png" alt="Suzie Isaac">
+        </a>
+        <p>Suzie Isaac – Retrouver son identité après un combat contre le cancer du sein</p>
+      </div>
+
+    </div> <!-- ✅ fermeture ajoutée -->
+  </section>
+
+  <section>
+    <h2>Équipe</h2>
+    <div class="team-text">
+      <div class="team-card">
+        <h3>Benoit Trépanier</h3>
+        <p><strong>Consultant en gestion et communication</strong></p>
+        <p>Co‑réalisation : idéation, scénarios, logistique, entrevues</p>
+      </div>
+
+      <div class="team-card">
+        <h3>Thomas Wadham Gagnon</h3>
+        <p><strong>Production vidéo</strong></p>
+        <p>Co‑réalisation : idéation, direction artistique, caméra, montage</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Partenaires</h2>
+    <div class="partners">
+      <div class="partner-card"><img src="logo1.png" alt="Partenaire 1"></div>
+      <div class="partner-card"><img src="logo2.png" alt="Partenaire 2"></div>
+      <div class="partner-card"><img src="logo3.png" alt="Partenaire 3"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Pour collaborer avec nous : <strong>trepanb@hotmail.com</strong></p>
+    <p>
+      <a href="https://www.linkedin.com/in/btconsultant/" target="_blank" rel="noopener">LinkedIn Benoit Trépanier</a>
+      |
